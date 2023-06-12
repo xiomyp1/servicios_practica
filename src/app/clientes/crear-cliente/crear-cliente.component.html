@@ -1,0 +1,27 @@
+<div class="row">
+  <div class="col-25"></div>
+  <div class="col-50">
+    <form>
+      <div class="row">
+        <label>Nombre</label>
+        <input type="text" [(ngModel)]="cliente.nombre" name="nombre" />
+      </div>
+      <!-- gModel viene de lo que se conoce como el modelo en el MVC. El modelo trabaja con los datos, 
+                así que podemos entender que el enlace creado con ngModel permite que desde la vista pueda usar un dato. 
+                Sin embargo, con expresiones ya se podía usar un dato, volcando su valor en la vista como {{dato}}. 
+                La diferencia es que al usar ese dato en campos de formulario, debes aplicar el valor mediante la directiva ngModel. 
+                ngModel necesita que identifiquemos cada input con name-->
+      <div class="row">
+        <label>CIF</label>
+        <input type="text" [(ngModel)]="cliente.cif" name="cedula"/>
+      </div>
+      <div class="row">
+        <label>Ciudad</label>
+        <input type="text" [(ngModel)]="cliente.ciudad" name="ciudad" />
+      </div>
+      <div class="row end">
+        <button (click)="addCliente()" type="button">Añadir</button>
+      </div>
+    </form>
+  </div>
+</div>
